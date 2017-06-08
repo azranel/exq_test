@@ -19,7 +19,7 @@ defmodule BackgroundWorkers.Mixfile do
   def application do
     [mod: {BackgroundWorkers, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :exq]]
   end
 
   # Specifies which paths to compile per environment.

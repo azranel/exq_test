@@ -49,4 +49,4 @@ config :exq,
   namespace: "background_workers_dev",
   concurrency: 500,
   queues: ["default", "email"],
-  max_retries: 25,
+  max_retries: 25
