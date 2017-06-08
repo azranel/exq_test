@@ -41,3 +41,12 @@ config :background_workers, BackgroundWorkers.Repo,
   database: "background_workers_dev",
   hostname: "localhost",
   pool_size: 10
+
+config :exq,
+  name: Exq,
+  host: "127.0.0.1",
+  port: 6379,
+  namespace: "background_workers_dev",
+  concurrency: 500,
+  queues: ["default", "email"],
+  max_retries: 25,

@@ -17,3 +17,12 @@ config :background_workers, BackgroundWorkers.Repo,
   database: "background_workers_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+config :exq,
+  name: Exq,
+  host: "127.0.0.1",
+  port: 6379,
+  namespace: "background_workers_test",
+  concurrency: 500,
+  queues: ["default", "email"],
+  max_retries: 25,

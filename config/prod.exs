@@ -56,6 +56,15 @@ config :logger, level: :info
 #     config :background_workers, BackgroundWorkers.Endpoint, server: true
 #
 
+config :exq,
+  name: Exq,
+  host: System.get_env("REDIS_HOST"),
+  port: System.get_env("REDIS_PORT"),
+  namespace: "background_workers_prod",
+  concurrency: 500,
+  queues: ["default", "email"],
+  max_retries: 25,
+
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
 import_config "prod.secret.exs"
