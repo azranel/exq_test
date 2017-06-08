@@ -36,8 +36,6 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :background_workers, BackgroundWorkers.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
   database: "background_workers_dev",
   hostname: "localhost",
   pool_size: 10
